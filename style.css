@@ -1,0 +1,32 @@
+
+body {
+  background-color: #ddd; /*ddd is same as ddddddd*/
+  font-family: Arial, sans-serif; /*Try arial first, then sans-serif, which most older systems have*/
+}
+
+.container{
+  width: 100%  
+  max-width: 960px; 
+    display: block;
+   margin: 0 auto; /*auto essentially centers left/right; This only works when you have a block level element*/
+  background-color: #fff;
+  overflow: hidden; /*We need this because leftside and post are floated elements and aren't part of document flow*/
+}
+
+.leftSide, .post {
+/*Applies to both these; keeps things Don't Repeat Yourself (DRY) */
+ float: left;
+ padding: 15px;
+}
+
+.leftside {
+  width: 250px;
+}
+
+img.avatar {
+  width: 100%; /*Resize to fit the container*/
+}
+
+
+
+
